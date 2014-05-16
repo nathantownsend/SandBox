@@ -1,0 +1,37 @@
+﻿@model IEnumerable<UserDO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>All Users</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (UserDO user in Model)
+        {
+            <tr>
+                <td>@user.FirstName @user.LastName</td>
+                <td>@user.City, @user.State</td>
+                <td>@user.PhoneNumber</td>
+                <td>@user.EmailAddress</td>
+                <td>@Html.ActionLink("edit", "Edit", "User", new { Id = user.UserId }, null)</td>
+                <td>@Html.ActionLink("delete", "Delete", "User", new { Id = user.UserId }, null)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Add A New User", "Create", "User")
+
+
+
+

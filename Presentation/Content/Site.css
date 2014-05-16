@@ -1,0 +1,45 @@
+﻿body {
+    background-color: #ddd;
+}
+#wrapper {
+    background-color:#fff;
+    margin:auto;
+    width:1000px;
+    padding:20px;
+}
+
+#wrapper #header {
+    border-bottom:1px solid #ccc;
+}
+
+#wrapper #body {
+
+}
+
+#wrapper #footer {
+
+}
+
+
+label, input, select {
+    display: block;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.display-field {
+    font-weight:bold;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+
+th {
+    text-align: left;
+    font-weight: bold;
+    padding-right:10px;
+}

@@ -1,0 +1,79 @@
+﻿@model SandBox.DO.dbo.UserDO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>User Details</h2>
+
+<table>
+
+
+
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <td>
+            @Html.DisplayFor(model => model.UserId)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+
+        <td>
+            @Html.DisplayFor(model => model.FirstName)
+        </td>
+    </tr>
+
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+        <td> @Html.DisplayFor(model => model.LastName)</td>
+    </tr>
+
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.MiddleInitial)</th>
+        <td>@Html.DisplayFor(model => model.MiddleInitial)</td>
+    </tr>
+
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.EmailAddress)</th>
+        <td>@Html.DisplayFor(model => model.EmailAddress)</td>
+    </tr>
+
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.PhoneNumber)</th>
+        <td> @Html.DisplayFor(model => model.PhoneNumber)</td>
+    </tr>
+
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Address1)</th>
+        <td>@Html.DisplayFor(model => model.Address1)</td>
+    </tr>
+
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Address2)</th>
+        <td> @Html.DisplayFor(model => model.Address2)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.City)</th>
+        <td>@Html.DisplayFor(model => model.City)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.State)</th>
+        <td>@Html.DisplayFor(model => model.State)</td>
+    </tr>
+    <tr>
+        <th> @Html.DisplayNameFor(model => model.ZipCode)</th>
+        <td>@Html.DisplayFor(model => model.ZipCode)</td>
+    </tr>
+
+
+</table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { Id = Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dalapi.MSSQLDBManager</name>
+    </assembly>
+    <members>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.AllowNulls">
+            <summary>
+            If the column allows null values
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.InPK">
+            <summary>
+            If the column is in the primary key
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.IsIdentity">
+            <summary>
+            If the column is an identity column
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.Length">
+            <summary>
+            The maximum length of a string value
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.Name">
+            <summary>
+            The name of the column
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.Precision">
+            <summary>
+            The number of digits in a number
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.Scale">
+            <summary>
+            The number of digits to the right of the decimal point in a number
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.SqlType">
+            <summary>
+            The data type used in the SQL database
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.SystemType">
+            <summary>
+            The fully qualified data type name (eg. System.String)
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.SystemTypeString">
+            <summary>
+            Gets the unqualified data type name (eg. String)
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Column.SqlDataTypeString">
+            <summary>
+            Gets the unqualified sql data type name (eg. Varchar, BigInt, etc) 
+            </summary>
+        </member>
+        <member name="F:Dalapi.MSSQLDBManager.DBObjects.Database._database">
+            <summary>
+            The internal SMO database object
+            </summary>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.#ctor(Microsoft.SqlServer.Management.Smo.Database)">
+            <summary>
+            Creates a new instance of the database class using a SMO database object
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.CreateSchema(System.String)">
+            <summary>
+            Creates a new schema in the database
+            </summary>
+            <param name="SchemaName">The name of the schema to create</param>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.DropSchema(System.String)">
+            <summary>
+            Drops a schema from the database
+            </summary>
+            <param name="SchemaName"></param>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.DropDatabase">
+            <summary>
+            Removes the database from the server
+            </summary>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetSchemaNames">
+            <summary>
+            Gets a list of all the schemas contained in the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetTable(System.String,System.String)">
+            <summary>
+            Gets the table named in the TableName parameter
+            </summary>
+            <param name="TableName">The name of the table</param>
+            <param name="SchemaName">The schema the table resides in</param>
+            <returns>The table from the database</returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetTables(System.String)">
+            <summary>
+            Returns an array of all tables in the schema
+            </summary>
+            <param name="SchemaName">Tha name of the database schema</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetTableNames(System.String)">
+            <summary>
+            Gets a list of all the tables contained in the database schema
+            </summary>
+            <param name="Schema"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetView(System.String,System.String)">
+            <summary>
+            Gets the view named in the ViewName parameter
+            </summary>
+            <param name="ViewName">The name of the view</param>
+            <param name="SchemaName">The name of the database schema</param>
+            <returns>The view from the database</returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetViews(System.String)">
+            <summary>
+            Returns an array of all views in the schema
+            </summary>
+            <param name="SchemaName">Tha name of the database schema</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetViewNames(System.String)">
+            <summary>
+            Gets a list of all the views contained in the database schema
+            </summary>
+            <param name="Schema"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetDatabaseScriptWriter(System.String)">
+            <summary>
+            Gets a DatabaseScripts object containing the names and definitions for tables, views, and stored procedures
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Database.GetDatabaseScriptRunner">
+            <summary>
+            Gets a Database Script Runner object for executing scripts against the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Database.Name">
+            <summary>
+            The name of the database
+            </summary>
+        </member>
+        <member name="T:Dalapi.MSSQLDBManager.DBObjects.IDataContainer">
+            <summary>
+            The interface for both Tables and Views
+            </summary>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.GetColumn(System.String)">
+            <summary>
+            Gets the named column
+            </summary>
+            <param name="ColumnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.GetColumns">
+            <summary>
+            Gets a list of all the columns in the table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.GetIndex(System.String)">
+            <summary>
+            Gets an index by name
+            </summary>
+            <param name="IndexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.GetIndexes">
+            <summary>
+            Gets a list of all indexes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.GetIndexNames">
+            <summary>
+            Gets a list of the index names on the table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.IndexExists(System.String)">
+            <summary>
+            Whether an index exists or not
+            </summary>
+            <param name="IndexName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.Name">
+            <summary>
+            The name of the view
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.IsView">
+            <summary>
+            If the object is a view
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.IDataContainer.SchemaName">
+            <summary>
+            The schema name where the table resides
+            </summary>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.#ctor(Microsoft.SqlServer.Management.Smo.Database,System.String)">
+            <summary>
+            Create a new instance of the database scripts object from the database provided
+            </summary>
+            <param name="Database"></param>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.CreateScriptFiles(System.String)">
+            <summary>
+            Writes SQL script files for each object
+            </summary>
+            <param name="OutputFolder"></param>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.CreateScriptFiles(System.String,Dalapi.MSSQLDBManager.Scripting.ScriptObject[])">
+            <summary>
+            A helper for the public method to write files
+            </summary>
+            <param name="Folder"></param>
+            <param name="scripts"></param>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.DatabaseName">
+            <summary>
+            The name of the database
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.SchemaNames">
+            <summary>
+            Schemas contained in the database
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.AllScripts">
+            <summary>
+            A combination of all Tables, Views, and Stored Procedures
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.StoredProcedures">
+            <summary>
+            Stored Procedures
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.Tables">
+            <summary>
+            Tables
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptWriter.Views">
+            <summary>
+            Views
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Index.Columns">
+            <summary>
+            Gets the columns contained in the index
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Index.IsPK">
+            <summary>
+            If this is a primary key (clustered index)
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Index.Name">
+            <summary>
+            Gets the name of the index
+            </summary>
+        </member>
+        <member name="T:Dalapi.MSSQLDBManager.DBObjects.Server">
+            <summary>
+            Server provides methods for working with schemas and databases on a MSSQL Server
+            </summary>
+        </member>
+        <member name="F:Dalapi.MSSQLDBManager.DBObjects.Server._server">
+            <summary>
+            The private instance of the SQL Server object
+            </summary>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Server.#ctor">
+            <summary>
+            Connects to the local SQL Server using windows authentication
+            </summary>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Server.#ctor(System.String)">
+            <summary>
+            Connects to a named SQL Server using windows authentication
+            </summary>
+            <param name="ServerName"></param>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Server.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Connects to a named SQL Server with a user name and password
+            </summary>
+            <param name="ServerName"></param>
+            <param name="UserName"></param>
+            <param name="Password"></param>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Server.CreateDatabase(System.String)">
+            <summary>
+            Creates a new database on the server
+            </summary>
+            <param name="DatabaseName">The name of the database</param>
+            <returns>The newly created database</returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Server.DatabaseExists(System.String)">
+            <summary>
+            Whether or not a database with the given name exists on the server
+            </summary>
+            <param name="Name">The name of the database</param>
+            <returns>Returns true if the named database exists</returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Server.GetDatabase(System.String)">
+            <summary>
+            Gets the named database
+            </summary>
+            <param name="Name">The name of the database</param>
+            <returns>The specified database</returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Table.GetColumn(System.String)">
+            <summary>
+            Gets the named column
+            </summary>
+            <param name="ColumnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Table.GetColumns">
+            <summary>
+            Gets a list of all the columns in the table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Table.GetIndex(System.String)">
+            <summary>
+            Gets an index by name
+            </summary>
+            <param name="IndexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Table.GetIndexes">
+            <summary>
+            Gets a list of all indexes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Table.GetIndexNames">
+            <summary>
+            Gets a list of the index names on the table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.Table.IndexExists(System.String)">
+            <summary>
+            Whether an index exists or not
+            </summary>
+            <param name="IndexName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Table.Name">
+            <summary>
+            The name of the view
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.Table.SchemaName">
+            <summary>
+            The schema name where the table resides
+            </summary>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.View.GetColumn(System.String)">
+            <summary>
+            Gets the named column
+            </summary>
+            <param name="ColumnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.View.GetColumns">
+            <summary>
+            Gets a list of all the columns in the table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.View.GetIndex(System.String)">
+            <summary>
+            Gets an index by name
+            </summary>
+            <param name="IndexName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.View.GetIndexes">
+            <summary>
+            Gets a list of all indexes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.View.GetIndexNames">
+            <summary>
+            Gets a list of the index names on the table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.DBObjects.View.IndexExists(System.String)">
+            <summary>
+            Whether an index exists or not
+            </summary>
+            <param name="IndexName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.View.Name">
+            <summary>
+            The name of the view
+            </summary>
+        </member>
+        <member name="P:Dalapi.MSSQLDBManager.DBObjects.View.SchemaName">
+            <summary>
+            The schema name where the table resides
+            </summary>
+        </member>
+        <member name="T:Dalapi.MSSQLDBManager.Scripting.ScriptObject">
+            <summary>
+            Provides the name and content of a scripted object
+            </summary>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptRunner.RunScripts(System.String[])">
+            <summary>
+            Runs the scripts in the array
+            </summary>
+            <param name="SqlScripts"></param>
+        </member>
+        <member name="M:Dalapi.MSSQLDBManager.Scripting.DatabaseScriptRunner.RunScript(System.String)">
+            <summary>
+            Executes create / alter scripts against the database
+            </summary>
+            <param name="SqlScript"></param>
+        </member>
+    </members>
+</doc>

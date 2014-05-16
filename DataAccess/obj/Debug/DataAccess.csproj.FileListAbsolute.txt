@@ -1,0 +1,4 @@
+C:\Users\cb0290\Documents\GitHub\SandBox\DataAccess\bin\Debug\SandBox.DAL.dll
+C:\Users\cb0290\Documents\GitHub\SandBox\DataAccess\bin\Debug\SandBox.DAL.pdb
+C:\Users\cb0290\Documents\GitHub\SandBox\DataAccess\obj\Debug\SandBox.DAL.dll
+C:\Users\cb0290\Documents\GitHub\SandBox\DataAccess\obj\Debug\SandBox.DAL.pdb

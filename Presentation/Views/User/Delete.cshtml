@@ -1,0 +1,18 @@
+﻿@model SandBox.DO.dbo.UserDO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<p>Are you sure you want to delete the user <strong>@Model.FirstName @Model.LastName</strong>?</p>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.UserId)
+    <p>
+        <input type="submit" value="Delete" /> 
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

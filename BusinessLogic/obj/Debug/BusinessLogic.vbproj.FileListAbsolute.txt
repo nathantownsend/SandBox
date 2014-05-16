@@ -1,0 +1,11 @@
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\bin\Debug\SandBox.BLL.dll
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\bin\Debug\SandBox.BLL.pdb
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\bin\Debug\SandBox.BLL.xml
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\bin\Debug\SandBox.DAL.dll
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\bin\Debug\SandBox.DAL.pdb
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\obj\Debug\SandBox.BLL.Resources.resources
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\obj\Debug\BusinessLogic.vbproj.GenerateResource.Cache
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\obj\Debug\SandBox.BLL.dll
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\obj\Debug\SandBox.BLL.xml
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\obj\Debug\SandBox.BLL.pdb
+C:\Users\cb0290\Documents\GitHub\SandBox\BusinessLogic\obj\Debug\BusinessLogic.vbprojResolveAssemblyReference.cache

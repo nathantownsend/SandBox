@@ -1,0 +1,62 @@
+﻿@model Presentation.ViewModels.UserVM
+
+@{
+    ViewBag.Title = "Edit User";
+}
+
+<h2>Edit Existing User</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(m => m.UserId)
+
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName)
+    @Html.ValidationMessageFor(m => m.FirstName)
+
+    
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName)
+    @Html.ValidationMessageFor(m => m.LastName)
+
+    @Html.LabelFor(m => m.PhoneNumber)
+    @Html.TextBoxFor(m => m.PhoneNumber)
+    @Html.ValidationMessageFor(m => m.PhoneNumber)
+
+    @Html.LabelFor(m => m.EmailAddress)
+    @Html.TextBoxFor(m => m.EmailAddress)
+    @Html.ValidationMessageFor(m => m.EmailAddress)
+
+    @Html.LabelFor(m => m.Address1)
+    @Html.TextBoxFor(m => m.Address1)
+    @Html.ValidationMessageFor(m => m.Address1)
+
+    @Html.LabelFor(m => m.Address2)
+    @Html.TextBoxFor(m => m.Address2)
+    @Html.ValidationMessageFor(m => m.Address2)
+
+    @Html.LabelFor(m => m.City)
+    @Html.TextBoxFor(m => m.City)
+    @Html.ValidationMessageFor(m => m.City)
+
+    @Html.LabelFor(m => m.State)
+    @Html.DropDownListFor(m => m.State, Model.States)
+    @Html.ValidationMessageFor(m => m.State)
+
+    @Html.LabelFor(m => m.ZipCode)
+    @Html.TextBoxFor(m => m.ZipCode)
+    @Html.ValidationMessageFor(m => m.ZipCode)
+
+    
+    
+    
+    <p>
+        <input type="submit" value="Update" />
+    </p>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
